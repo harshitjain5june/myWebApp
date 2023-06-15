@@ -4,6 +4,11 @@
       "name": "Harshit",
       "location": "Romeo Lane",
       "id": 1
+    },
+    {
+      "name": "Harshit Jain",
+      "location": "Fiery Grills",
+      "id": 2
     }
   ]
 }
