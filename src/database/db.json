@@ -1,5 +1,9 @@
 {
   "users": [
-    
+    {
+      "name": "Harshit",
+      "location": "Romeo Lane",
+      "id": 1
+    }
   ]
 }

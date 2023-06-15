@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import '../styles/styles.css'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -22,6 +22,27 @@ export default function Party() {
     const handleclosedialog = () =>{
         setShowForm(false);
     }
+    const data  = async() =>{
+        const response= await axios.get("http://localhost:8080/users");
+        const data = response.data;
+        let romeoLane=0;
+        let fierygrills=0;
+        for(const item of data){
+            const i:any =item;
+            console.log(i.location)
+            console.log(item)
+            if(i.location === "Romeo Lane"){
+                romeoLane++;
+            }
+            else{
+                fierygrills++;
+            }
+        }
+        setFormData({...formData, totalromeo:romeoLane, totalfiery:fierygrills})
+        const filtered = [...new Set(data)]
+        setVotes(filtered);
+    }
+    data();
     const submitDetails = async(e : React.FormEvent)=>{
         e.preventDefault();
         if(formData.name.length>0 && formData.votedFor.length>0){
