@@ -42,7 +42,10 @@ export default function Party() {
         const filtered = [...new Set(data)]
         setVotes(filtered);
     }
-    data();
+    useEffect(()=>{
+        data();
+    },[])
+    
     const submitDetails = async(e : React.FormEvent)=>{
         e.preventDefault();
         if(formData.name.length>0 && formData.votedFor.length>0){
