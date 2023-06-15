@@ -1,10 +1,7 @@
 {
     "port": 8080,
-    "watch": true,
     "middlewares": {
-      "after": [
-        "cors"
-      ]
+      "cors": true
     }
   }
   
