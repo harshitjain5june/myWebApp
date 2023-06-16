@@ -1,6 +1,6 @@
 {
   "name": "my-webapp",
-  "proxy": "https://allintechs.in",
+  "proxy": "http://localhost:8080",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

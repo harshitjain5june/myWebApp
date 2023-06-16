@@ -9,6 +9,11 @@
       "name": "Harshit Jain",
       "location": "Fiery Grills",
       "id": 2
+    },
+    {
+      "name": "Pandey",
+      "location": "Fiery Grills",
+      "id": 3
     }
   ]
 }

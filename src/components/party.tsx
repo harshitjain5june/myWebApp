@@ -23,7 +23,7 @@ export default function Party() {
         setShowForm(false);
     }
     const data  = async() =>{
-        const response= await axios.get("https://allintechs.in/api");
+        const response= await axios.get("/users");
         const data = response.data;
         let romeoLane=0;
         let fierygrills=0;
@@ -49,7 +49,7 @@ export default function Party() {
     const submitDetails = async(e : React.FormEvent)=>{
         e.preventDefault();
         if(formData.name.length>0 && formData.votedFor.length>0){
-            const result = await axios.post("https://allintechs.in/api",{
+            const result = await axios.post("/users",{
                 name: formData.name,
                 location: formData.votedFor
             })
@@ -57,7 +57,7 @@ export default function Party() {
        
         console.log("form submitted");
         setShowForm(false);
-        const response= await axios.get("https://allintechs.in/api");
+        const response= await axios.get("/users");
         const data = response.data;
         let romeoLane=0;
         let fierygrills=0;
